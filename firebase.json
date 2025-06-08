@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "~/Documents/Zelgit/",
+    "public": "public",
     "ignore": [
       "firebase.json",
       "**/.*",
