@@ -427,12 +427,44 @@
         height: 48px;
       }
     }
+
+    /* Mobile-only overlay logo */
+    .mobile-logo-overlay {
+      display: none;
+    }
+
+    @media (max-width: 767px) {
+      .mobile-logo-overlay {
+        display: block;
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        z-index: 50;
+        pointer-events: none;
+      }
+
+      .mobile-logo-overlay img {
+        width: 100px;
+        height: auto;
+      }
+
+      .desktop-logo {
+        display: none;
+      }
+
+      header {
+        padding-top: 0;
+      }
+    }
   </style>
   <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
 </head>
 <body>
+  <div class="mobile-logo-overlay">
+    <img src="images/Artboard 1@3x.png" alt="Zelgit Logo" />
+  </div>
   <div class="logo-container">
-    <img src="images/Artboard 1@3x.png" alt="Zelgit Logo">
+    <img class="desktop-logo" src="images/Artboard 1@3x.png" alt="Zelgit Logo" />
   </div>
   <header>
     <div class="hero-bg"></div>
